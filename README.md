@@ -2,37 +2,28 @@
 
 ## Summary
 
-Minimal reproducible example for TODO.
-
-When **Email as username** is enabled via the _Admin Console_, why does the `--features="update-email"` option cause the Email field to be disabled on the _Account Console_?
-
-This seems unintuitive, as I thought `--features-disabled="update-email"` would be needed instead.
+When does the Email field become disabled on the _Account Console_?
 
 ## Steps to reproduce
 
-### _Without_ feature flag
+### Prereqs
 
 1. Install Docker
-1. Build images
 
-        docker compose build
+### _Without_ feature flag
 
-1. Up `kc-a`
+1. Build and up `kc-a`
 
-        docker compose up kc-a
+        docker compose down ; docker compose up --build kc-a
 
 1. Login to the account console
-1. Notice how the **Email** field is **enabled**
+1. Notice how the **Email** field is **disabled**
 
 ### _With_ feature flag
 
-1. Press `Ctrl` + `C`, then down containers
+1. Build and up `kc-b`
 
-        docker compose down
-
-1. Up `kc-b`
-
-        docker compose up kc-b
+        docker compose down ; docker compose up --build kc-b
 
 1. Login to the account console
 1. Notice how the **Email** field is **disabled**

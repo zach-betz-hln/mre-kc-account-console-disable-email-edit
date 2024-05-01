@@ -17,7 +17,7 @@ services:
       - ${KC_HTTP_PORT}:${KC_HTTP_PORT}
     env_file:
       - .env
-    command: start-dev
+    command: start-dev --features-disabled="update-email"
 
   kc-b:
     depends_on:
