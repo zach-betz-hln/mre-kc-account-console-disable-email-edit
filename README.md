@@ -21,10 +21,7 @@ This seems unintuitive, as I thought `--features-disabled="update-email"` would 
 
         docker compose up kc-a
 
-1. Go to the account console at http://localhost:8080/realms/master/account/
-1. Login with
-    - Username: `admin`
-    - Password: `juggle-prance-shallot-wireless-outlet`
+1. Login to the account console
 1. Notice how the **Email** field is **enabled**
 
 ### _With_ feature flag
@@ -37,5 +34,14 @@ This seems unintuitive, as I thought `--features-disabled="update-email"` would 
 
         docker compose up kc-b
 
-1. Go to the account console again and login with the same credentials
+1. Login to the account console
 1. Notice how the **Email** field is **disabled**
+
+## Links
+
+- Account console: http://localhost:8080/realms/master/account/
+    - Username: `jane@example.com`
+    - Password: `juggle-prance-shallot-wireless-outlet`
+- Admin console: http://localhost:8080/admin/master/console/
+    - Username: `admin`
+    - Password: `juggle-prance-shallot-wireless-outlet`
