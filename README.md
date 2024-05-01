@@ -12,7 +12,7 @@ When does the Email field become disabled on the _Account Console_?
 
 ### _Without_ feature flag
 
-1. Build and up `kc-a`
+1. Build and up
 
         docker compose down ; docker compose up --build kc-a
 
@@ -21,7 +21,7 @@ When does the Email field become disabled on the _Account Console_?
 
 ### _With_ feature flag
 
-1. Build and up `kc-b`
+1. Build and up
 
         docker compose down ; docker compose up --build kc-b
 
