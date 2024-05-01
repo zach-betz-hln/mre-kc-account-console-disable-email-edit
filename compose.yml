@@ -1,0 +1,31 @@
+services:
+  db:
+    build:
+      context: ./db
+    shm_size: 128mb
+    ports:
+      - 5432:5432
+    env_file:
+      - .env
+
+  kc-a:
+    depends_on:
+      - db
+    build:
+      context: ./kc
+    ports:
+      - ${KC_HTTP_PORT}:${KC_HTTP_PORT}
+    env_file:
+      - .env
+    command: start-dev
+
+  kc-b:
+    depends_on:
+      - db
+    build:
+      context: ./kc
+    ports:
+      - ${KC_HTTP_PORT}:${KC_HTTP_PORT}
+    env_file:
+      - .env
+    command: start-dev --features="update-email"
