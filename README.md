@@ -36,3 +36,12 @@ When does the Email field become disabled on the _Account Console_?
 - Admin console: http://localhost:8080/admin/master/console/
     - Username: `admin`
     - Password: `juggle-prance-shallot-wireless-outlet`
+
+## Realm config
+
+The `db/init` files contain minimal config of the realm:
+
+- Create example user
+- Realm settings > General > Unmanaged Attributes > Enabled
+- Realm settings > Login > Email as username > Enabled
+- Realm settings > Login > Login with email > Enabled
